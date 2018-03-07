@@ -13,7 +13,12 @@ public class translateNumber {
         HashMap<String,String> DTE= new HashMap<>();
         for (int i=0; i<10;i++){ DTE.put(DE.get(i), EN.get(i));}
         //Translate
-        if (DTE.get(numGer).equals(""))return "ERROR";
-        else return DTE.get(numGer);
+
+        try{
+            String result = DTE.get(numGer);
+            return result;
+        }catch (NullPointerException ex){
+            return "ERROR";
+        }
     }
 }
