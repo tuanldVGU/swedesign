@@ -2,12 +2,12 @@ package document;
 
 import java.util.List;
 
-public class complexDocument extends coreDocument{
-    List<coreDocument> components;
-    public void addComponent(coreDocument a){
+public class complexDocument extends manageDocument{
+    List<DocumentObject> components;
+    public void addComponent(DocumentObject a){
         components.add(a);
     }
-    public void deleteComponent(coreDocument a){
+    public void deleteComponent(DocumentObject a){
         components.remove(a);
     }
     public void deleteAllComponent(){
@@ -15,6 +15,10 @@ public class complexDocument extends coreDocument{
     }
     @Override
     public int getSize() {
-        return components.size;
+        int ans=0;
+        for (int i=0;i<components.size();i++){
+            ans+=components.get(i).getSize();
+        }
+        return ans;
     }
 }
