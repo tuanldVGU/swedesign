@@ -10,7 +10,7 @@ public class managePerformedTranslation {
         ArrayList<String> ans = null;
         try
         {
-            FileInputStream inpf = new FileInputStream("~\\Desktops\\exp.txt");
+            FileInputStream inpf = new FileInputStream("exp.txt");
             ObjectInputStream in = new ObjectInputStream(inpf);
             ans = (ArrayList<String>) in.readObject();
             in.close();
@@ -22,7 +22,7 @@ public class managePerformedTranslation {
 
     public void storePerformedTranslation(ArrayList trans){
         try {
-            FileOutputStream outf = new FileOutputStream("~\\Desktops\\exp.txt");
+            FileOutputStream outf = new FileOutputStream("exp.txt");
             ObjectOutputStream out = new ObjectOutputStream(outf);
             out.writeObject(trans);
             out.close();
