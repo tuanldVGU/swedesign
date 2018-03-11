@@ -13,7 +13,7 @@ public class testClass {
         results = new ArrayList<>();
         int count = 0;
         String[] numEn = new String[]{"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten","abc","def"};
-        String[] numDe = new String[]{"eins", "zwei", "drei", "vier", "funf", "sechs", "sieben", "achts", "neun", "zehn"};
+        String[] numDe = new String[]{"eins", "zwei", "drei", "vier", "funf", "sechs", "sieben", "achts", "neun", "zehn","no","yes"};
         Random rand = new Random();
 
         for(int j = 0; j < 100; ++j) {

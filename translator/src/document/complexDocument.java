@@ -1,10 +1,12 @@
 package document;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class complexDocument extends manageDocument{
-    List<DocumentObject> components;
+    List<DocumentObject> components = new ArrayList<DocumentObject>();
     public void addComponent(DocumentObject a){
+        System.out.println("yes");
         components.add(a);
     }
     public void deleteComponent(DocumentObject a){

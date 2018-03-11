@@ -1,8 +1,4 @@
 package document;
-
-
-
-
 abstract public class manageDocument implements DocumentObject{
     private int documentID = 0;
     @Override

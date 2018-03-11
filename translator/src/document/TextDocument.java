@@ -4,10 +4,13 @@ import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 
 public class TextDocument extends coreDocument {
+    private String value;
     public TextDocument(String abc, Object type) {
         super();
         try {
-            this.size = ByteBuffer.wrap(abc.getBytes((String) type)).getInt();
+            String encode = (String) type;
+            String value = new String(abc.getBytes(encode));
+            this.size = (byte) abc.length();
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
