@@ -1,29 +1,67 @@
 package org.translator.control;
-import java.util.*;
+<<<<<<< HEAD
+
+import java.util.HashMap;
+
+import org.translator.entities.PerformedTranslation;
+
 public class TranslateModule {
-	 public static HashMap<String,String> newmap= new HashMap<String,String>();
-		private static TranslateModule instance = new TranslateModule();
-		private TranslateModule() {}
-		public static TranslateModule getInstance() {return instance;}
-		public  static String Translates (String numGe) {
-			String result="Errors!!";
-			newmap.put("one","eins");
-			newmap.put("two","zwei");
-			newmap.put("three","drei");
-			newmap.put("four","vier");
-			newmap.put("five","funf");
-			newmap.put("six","sechs");
-			newmap.put("seven","sieben");
-			newmap.put("eight","achts");
-			newmap.put("nine","neun");
-			newmap.put("ten","zehn");
-			result=(String)newmap.get(numGe);
-			if(result==null) {result="Error!";}
-			return result;
+	private static HashMap<String, String> number = new HashMap<String,String>();
+	private static HashMap<String, String> phase_term = new HashMap<String,String>();
+	private static HashMap<String, String> result = new HashMap<String,String>();
+	private static String[] numDE = new String[]{"eins", "zwei", "drei", "vier", "funf", "sechs", "sieben", "acht", "neun", "zehn"};
+    private static String[] numEN = new String[]{"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"};
+	private static String[] phaseAndTermDE = new String[] {"hallo", "ich", "Tisch"};
+	private static String[] phaseAndTermEN = new String[] {"hello", "I", "Table"};
+	
+    public static  HashMap<String, String> translateMethod(String[] input)
+	{
+    		createTranslationMethod();
+		PerformedTranslation translate = PerformedTranslation.getInstance();
+		for(String inputTerm: input)
+		{
+			if(number.get(inputTerm)!=null)
+				result.put(inputTerm, number.get(inputTerm));
+			else if(phase_term.get(inputTerm)!=null)
+				result.put(inputTerm, phase_term.get(inputTerm));
+			else result.put(inputTerm, "error");
 			
-			}
-		public static void addTranslate(String pharse, String pha)
-			{newmap.put(pharse,pha);
-			System.out.println("Stored");}
+		}
+		translate.setResult(result);
+		//ManagePerformedTranslation.store(translate);
+		return ManagePerformedTranslation.store(translate);
+		
+		
+	}
+    
+    public static HashMap<String, String> translateMethod(String input)
+	{
+    		createTranslationMethod();
+		PerformedTranslation translate = PerformedTranslation.getInstance();
+			if(number.get(input)!=null)
+				result.put(input, number.get(input));
+			else if(phase_term.get(input)!=null)
+				result.put(input, phase_term.get(input));
+			else result.put(input, "error");
+		translate.setResult(result);
+		//ManagePerformedTranslation.store(translate);
+		return ManagePerformedTranslation.store(translate);
+		
+		
+	}
+	
+	//put value to hashmap
+	
+	public static void createTranslationMethod() {
+		for(int i = 0; i < 10; ++i) {
+			number.put(numDE[i], numEN[i]);
+		}
+		for(int i = 0; i < 2; ++i) {
+			phase_term.put(phaseAndTermDE[i], phaseAndTermEN[i]);
+		}
+		
+	}
+	
+=======
 
 }
