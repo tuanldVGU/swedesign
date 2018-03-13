@@ -14,7 +14,7 @@ public class TranslatorConsole {
 		inputArr = input.split(" ");
 		if(inputArr[0].equals("translate"))
 		{
-			TranslateModule.translateMethod(inputArr[1]);
+			TranslateModule.Translates(inputArr[1]);
 		}
 		
 	}
