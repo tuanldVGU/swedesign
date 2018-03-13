@@ -24,9 +24,9 @@ public class testClass {
         System.out.println("Doc3 size:"+doc3.getSize());
         System.out.println("Doc2 size:"+doc2.getSize());
         System.out.println("Doc0 size:"+doc0.getSize());
-        //doc0.deleteall();
-        //	System.out.println("Doc0 size:"+doc0.getSize());
-        //doc0.deleteComponent(doc2);
+        doc0.deleteComponent(doc2);
+        System.out.println("Doc0 size:"+doc0.getSize());
+        doc0.deleteAllComponent();
         System.out.println("Doc0 size:"+doc0.getSize());
     }
 }

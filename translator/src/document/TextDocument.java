@@ -9,8 +9,9 @@ public class TextDocument extends coreDocument {
         super();
         try {
             String encode = (String) type;
+            System.out.println(encode);
             String value = new String(abc.getBytes(encode));
-            this.size = (byte) abc.length();
+            this.size = (byte) value.length();
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
