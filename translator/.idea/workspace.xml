@@ -35,8 +35,8 @@
       <file leaf-file-name="ManagePerformedTranslation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/translator/control/ManagePerformedTranslation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="12" lean-forward="true" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+            <state relative-caret-position="402">
+              <caret line="33" column="59" lean-forward="true" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -176,27 +176,6 @@
               <item name="translator" type="b2602c69:ProjectViewProjectNode" />
               <item name="translator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="translator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="translator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="translator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="translator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="translator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="translator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="translator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="translator" type="462c0819:PsiDirectoryNode" />
-              <item name="control" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -830,8 +809,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/translator/control/ManagePerformedTranslation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="true" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+        <state relative-caret-position="402">
+          <caret line="33" column="59" lean-forward="true" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
           <folding />
         </state>
       </provider>
