@@ -6,6 +6,6 @@ public class TranslateModule {
 		
 	}
 	
-	PerformedTranslation.getInstance();
-
+//	PerformedTranslation.getInstance();
+//
 }
