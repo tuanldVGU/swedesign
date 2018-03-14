@@ -10,7 +10,7 @@ public class TestManagePerformedTranslation {
 	public static void main(String[] args)
 	{
 		TranslatorConsole.readInput();
-		TranslatorConsole.display();;
+		//TranslatorConsole.display();;
 	}
 
 //	@Test

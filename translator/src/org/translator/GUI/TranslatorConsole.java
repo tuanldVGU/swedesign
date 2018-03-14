@@ -1,5 +1,6 @@
 package org.translator.GUI;
 
+import javafx.application.Application;
 import org.translator.control.TranslateModule;
 
 import java.util.HashMap;
@@ -21,6 +22,7 @@ import java.util.Scanner;
         }
 
         public static void readInput() {
+
             inputArr = input.split(" ");
             if (inputArr[0].equals("translate")) {
                 try {
@@ -29,6 +31,22 @@ import java.util.Scanner;
                     result = TranslateModule.translateMethod(inputArr[1]);
                 }
             }
+            display();
+            System.out.println("Do you want to continue or see history: 1/2");
+            input = scan.nextLine();
+            if(input.equals("1"))
+            {
+                input = scan.nextLine();
+                inputArr = null;
+                result = new HashMap<>();
+                readInput();
+            }
+            if(input.equals("2"))
+            {
+                System.out.println("run");
+                Application.launch(TranslationView.class,"");
+            }
+
 
         }
 
