@@ -1,21 +1,15 @@
 package org.translator.control;
 
-import javafx.application.Application;
-import org.translator.GUI.AdminView1;
 
-import java.util.ArrayList;
-import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
+import static org.translator.GUI.TranslatorGUIDialog.a;
 
 public class ObserverHistory implements Observer{
-    List<String> history = new ArrayList<>();
-    String LastedTranslation;
-    public  ObserverHistory(String x){
-        LastedTranslation=x;
-        history.add(LastedTranslation);
-    }
+    public ObservableList<String> history = FXCollections.observableArrayList();
     @Override
     public void update() {
-        System.out.println("History Stored");
+        history=a.getData();
     }
 }

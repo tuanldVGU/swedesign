@@ -3,6 +3,7 @@ package org.translator.control;
 import java.util.HashMap;
 
 import org.translator.entities.PerformedTranslation;
+import static org.translator.GUI.TranslatorGUIDialog.a;
 
 public class TranslateModule {
 	private static HashMap<String, String> number = new HashMap<String,String>();
@@ -27,7 +28,7 @@ public class TranslateModule {
 			
 		}
 		translate.setResult(result);
-		//ManagePerformedTranslation.store(translate);
+		a.updateAll();
 		return ManagePerformedTranslation.store(translate);
 		
 		
@@ -43,7 +44,7 @@ public class TranslateModule {
 				result.put(input, phase_term.get(input));
 			else result.put(input, "error");
 		translate.setResult(result);
-		//ManagePerformedTranslation.store(translate);
+		a.updateAll();
 		return ManagePerformedTranslation.store(translate);
 		
 		
@@ -62,5 +63,3 @@ public class TranslateModule {
 	}
 }
 	
-//	PerformedTranslation.getInstance();
-//

@@ -10,7 +10,6 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -26,6 +25,7 @@ public class AdminView1 extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        a.subscribe(oh);
         primaryStage.setTitle("Transactions");
 
         final ListView listView = new ListView(data);
@@ -72,7 +72,7 @@ public class AdminView1 extends Application {
         refreshButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                data=a.getData();
+                data=oh.history;
                 listView.setItems(data);
             }
         });
