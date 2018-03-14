@@ -56,7 +56,7 @@ public class TranslateModule {
 		for(int i = 0; i < 10; ++i) {
 			number.put(numDE[i], numEN[i]);
 		}
-		for(int i = 0; i < 2; ++i) {
+		for(int i = 0; i < 3; ++i) {
 			phase_term.put(phaseAndTermDE[i], phaseAndTermEN[i]);
 		}
 		
