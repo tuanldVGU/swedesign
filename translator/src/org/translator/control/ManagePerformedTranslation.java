@@ -1,6 +1,8 @@
 package org.translator.control;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import org.translator.entities.PerformedTranslation;
 
@@ -15,12 +17,19 @@ public class ManagePerformedTranslation {
     private static String[] numEN = new String[]{"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"};
 	private static String[] phaseAndTermDE = new String[] {"hallo", "ich", "Tisch"};
 	private static String[] phaseAndTermEN = new String[] {"hello", "I", "Table"};
+
+    private List<Observer> observers = new ArrayList<Observer>();
+	private int state;
 	
 	public static HashMap<String, String> store(PerformedTranslation translate) {
         ManagePerformedTranslation.data = FXCollections.observableArrayList(translate);
         return translate.getResult();
     }
-	
+
+	public static ObservableList<PerformedTranslation> getData() {
+		return data;
+	}
+
 	public static int[] statistic(PerformedTranslation translate)
 	{
 		for(String value: translate.getResult().values())
@@ -38,6 +47,12 @@ public class ManagePerformedTranslation {
 		
 		return new int []{translateOfNumber,translateOfWord,translateOfError};
 	}
-	
+    public void subscribe( Observer s ){
+        observers.add(s);
+    }
+
+    public void unsubscribe( Observer s ){
+	    observers.remove(s);
+    }
 
 }

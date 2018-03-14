@@ -15,7 +15,7 @@ public class TranslateModule {
 	
     public static  HashMap<String, String> translateMethod(String[] input)
 	{
-    		createTranslationMethod();
+		createTranslationMethod();
 		PerformedTranslation translate = PerformedTranslation.getInstance();
 		for(String inputTerm: input)
 		{
@@ -60,6 +60,7 @@ public class TranslateModule {
 		}
 		
 	}
+}
 	
 //	PerformedTranslation.getInstance();
 //
